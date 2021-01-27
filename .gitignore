@@ -1,2 +1,4 @@
 
 sublog.md
+*.pyc
+__pycache__
