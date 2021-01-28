@@ -2,3 +2,9 @@
 sublog.md
 *.pyc
 __pycache__
+target
+.vscode
+questions.md
+.settings
+.projects
+.classpath
