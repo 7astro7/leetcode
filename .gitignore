@@ -9,3 +9,4 @@ questions.md
 .projects
 .classpath
 glue.sh
+.venv
