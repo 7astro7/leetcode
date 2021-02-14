@@ -8,3 +8,5 @@ questions.md
 .settings
 .projects
 .classpath
+.venv
+glue.sh
