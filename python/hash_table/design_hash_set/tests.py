@@ -9,11 +9,10 @@ class TestMyHashSet(unittest.TestCase):
             stop: int, stride: int = 1) -> map:
         while start < stop:
             yield a_hash_set.contains(start)
-            start += 1
+            start += stride
 
     def test_idk(self):
-        observed = []
-        hash_set = MyHashSet()
+        observed, hash_set = [], MyHashSet()
         hash_set.add(33033)
         observed.append(hash_set.contains(33033)) # 1
         add_to_set = (43907, 32233, 58636, 66409,)
@@ -49,16 +48,15 @@ class TestMyHashSet(unittest.TestCase):
 
     def test_add_and_remove_5K_elements_contains_returns_0(self):
         random_ints = np.random.randint(0, 10_000, 5_000)
-        hash_set = MyHashSet()
-        expected = [1,] * len(set(random_ints))
-        observed = []
+        observed, hash_set = [], MyHashSet()
+        expected = [1,] * len(random_ints)
         for random_int in random_ints:
             hash_set.add(random_int)
-            expected_true = hash_set.contains(random_int)
+            shouldbe_true = hash_set.contains(random_int)
             hash_set.remove(random_int)
-            expected_false = hash_set.contains(random_int)
-            observed.append(expected_true + expected_false)
-        self.assertEqual(expected, [1,] * len(set(random_ints)))
+            shouldbe_false = hash_set.contains(random_int)
+            observed.append(shouldbe_true + shouldbe_false)
+        self.assertEqual(expected, observed)
 
     def test_contains_works_four_times(self):
         hash_set, observed = MyHashSet(), []

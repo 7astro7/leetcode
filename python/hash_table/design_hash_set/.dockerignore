@@ -3,3 +3,4 @@ questions.md
 __pycache__
 .venv
 .vscode
+glue.sh
