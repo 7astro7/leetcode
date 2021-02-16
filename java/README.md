@@ -1,8 +1,6 @@
 
 # How to run this code
 
-__Building with Maven__
+To run all tests once Docker image is built:
 
-To run all tests, compile source with Maven 3.6.3:
-
-    $ mvn install
+    $ docker run [image name] mvn package
