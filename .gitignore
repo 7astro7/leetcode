@@ -6,7 +6,7 @@ target
 .vscode
 questions.md
 .settings
-.projects
+.project
 .classpath
 glue.sh
 .venv
