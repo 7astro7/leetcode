@@ -1,12 +1,8 @@
 
-sublog.md
-*.pyc
-__pycache__
+questions.md
 target
 .vscode
-questions.md
 .settings
 .project
 .classpath
 glue.sh
-.venv
