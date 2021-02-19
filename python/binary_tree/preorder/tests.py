@@ -6,40 +6,47 @@ from TreeNode import TreeNode
 class TestPreorder(unittest.TestCase):
 
     def test_1null23_returns_123(self):
-        pre_nodes = [1, 2, 3,]
-        btree = list(map(lambda i: TreeNode(i), pre_nodes))
-        btree[0].right = btree[1]
-        btree[1].left = btree[-1]
-        btree_answer = Solution().preorder_traversal(btree[0])
-        print(btree_answer)
-        self.assertEqual(btree_answer, pre_nodes)
+        expected = [1, 2, 3,]
+        nodes = list(map(lambda i: TreeNode(i), expected))
+        nodes[0].right = nodes[1]
+        nodes[1].left = nodes[-1]
+        observed = Solution().preorder_traversal(nodes[0])
+        self.assertEqual(observed, expected)
 
     def test_1_returns_1(self):
-        self.assertEqual(Solution().preorder_traversal(TreeNode(1)), [1])
+        observed = Solution().preorder_traversal(TreeNode(1))
+        self.assertEqual(observed, [1,])
 
     def test_1_null_2_returns_1_2(self):
-        btree = list(TreeNode(i) for i in range(1, 3))
-        btree[0].right = btree[1] 
-        self.assertEqual(Solution().preorder_traversal(btree[0]), [1, 2])
+        a_root = TreeNode(1)
+        a_root.right = TreeNode(2)
+        observed = Solution().preorder_traversal(a_root)
+        self.assertEqual(observed, [1, 2,])
 
     def test_1_2_returns_1_2(self):
-        btree = list(TreeNode(i) for i in range(1, 3))
-        btree[0].left = btree[1] 
-        self.assertEqual(Solution().preorder_traversal(btree[0]), [1, 2])
+        nodes = list(TreeNode(i) for i in range(1, 3))
+        a_root = TreeNode(1)
+        a_root.left = TreeNode(2) 
+        observed = Solution().preorder_traversal(a_root)
+        self.assertEqual(observed, [1, 2])
 
     def test_only_left_children_size_5_returns(self):
-        btree = list(TreeNode(i) for i in range(0, 26, 5))
+        expected = list(range(0, 26, 5))
+        nodes = list(TreeNode(i) for i in expected)
         i = 0 
-        while i < len(btree) - 1:
-            btree[i].left = btree[i + 1]
+        while i < len(nodes) - 1:
+            nodes[i].left = nodes[i + 1]
             i += 1
-        self.assertEqual(Solution().preorder_traversal(btree[0]), [0, 5, 10, 15, 20, 25])
+        observed = Solution().preorder_traversal(nodes[0])
+        self.assertEqual(expected, observed)
 
     def test_3_1_2_returns_3_1_2(self):
-        btree = [TreeNode(i) for i in (3, 1, 2,)] 
-        btree[0].left = btree[1]
-        btree[0].right = btree[2] 
-        self.assertEqual(Solution().preorder_traversal(btree[0]), [3, 1, 2,])
+        expected = [3, 1, 2,]
+        a_root = TreeNode(3)
+        a_root.left = TreeNode(1)
+        a_root.right = TreeNode(2)
+        observed = Solution().preorder_traversal(a_root)
+        self.assertEqual(observed, expected)
 
 
 if __name__ == "__main__":
