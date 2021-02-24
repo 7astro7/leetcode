@@ -26,6 +26,13 @@ public class SolutionTests {
     }
 
     @Test
+    public void test_null_root_returns_empty_list() {
+        List<Integer> expected = new ArrayList<>();
+        List<Integer> observed = getObserved(null);
+        assertTrue(traversedOK(observed, expected));
+    }
+
+    @Test
     public void test_1_2_returns_2_1() {
         TreeNode aRoot = new TreeNode(1);
         aRoot.left = new TreeNode(2);

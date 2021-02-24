@@ -40,11 +40,18 @@ Example 2:
 
     public List<Integer> inorderTraversal(TreeNode root) {
         if (root == null) {
+            return visited;
+        }
+        return helper(root);
+    }
+
+    public List<Integer> helper(TreeNode root) {
+        if (root == null) {
             return null;
         }
-        inorderTraversal(root.left);
+        helper(root.left);
         visited.add(root.val);
-        inorderTraversal(root.right);
+        helper(root.right);
         return visited;
     }
 }
