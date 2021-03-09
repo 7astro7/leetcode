@@ -18,10 +18,10 @@ def root_of_2_node_tree():
 @pytest.fixture
 def root_of_depth_5_tree():
     nodes = list(TreeNode(i) for i in (4, -100, -9, -52, -4,))
-    nodes[0].right = nodes[1]
-    nodes[1].left = nodes[2]
-    nodes[2].right = nodes[3]
-    nodes[3].left = nodes[4]
+#    nodes[0].right = nodes[1]
+#    nodes[1].left = nodes[2]
+#    nodes[2].right = nodes[3]
+#    nodes[3].left = nodes[4]
     for i in range(len(nodes) - 1):
         if not i % 2: 
             nodes[i].right = nodes[i + 1] 
