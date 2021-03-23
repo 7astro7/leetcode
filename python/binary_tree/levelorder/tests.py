@@ -30,7 +30,7 @@ class testLevelOrder(unittest.TestCase):
     def test_imbalanced_right_returns_5_levels(self):
         nodes = [[TreeNode(i),] for i in range(47, 52)]
         for j in range(len(nodes) - 1):
-            nodes[j][0].left = nodes[j + 1][0]
+            nodes[j][0].right = nodes[j + 1][0]
         expected = [[level[0].val,] for level in nodes]
         observed = Solution().level_order(nodes[0][0])
         self.assertEqual(observed, expected)
