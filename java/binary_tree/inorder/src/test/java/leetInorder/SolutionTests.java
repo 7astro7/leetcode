@@ -15,7 +15,6 @@ public class SolutionTests {
            if (observed.get(i) - expected.get(i) != 0) {
                return false;
            }
-           i++;
        }
        return true;
     }
