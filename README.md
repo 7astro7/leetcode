@@ -4,7 +4,8 @@
 # __leetcode__
 
 This repository is meant to house some leetcode solutions I've come 
-up with. The solutions aren't always new: the approach isn't 
+up with. If you think these modules are ugly, you should see the ones that don't work!! 
+The solutions aren't always new: the approach isn't 
 always fundementally different from those used to surface known 
 solutions. This applies especially to classic problems like preorder 
 traversal. As a new devotee of test-driven development I also include 
