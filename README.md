@@ -14,8 +14,7 @@ tests to the extent possible, though not always for earlier algorithms
 ## Purpose
 __Goal__: provide a stock of core algorithm components for future projects 
 
-Algorithms that are written in Python and Java or C are repeated for the sake
-or reinforcement 
+Algorithms that are written in Python and Java or C are repeated for the sake of reinforcement 
 
 ## Please challenge these solutions
 This project welcomes suggestions and contributions! Please challenge these solutions, poke holes in them, use them for other open source projects, indicate where

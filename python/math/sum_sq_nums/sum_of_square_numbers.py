@@ -28,9 +28,6 @@ Constraints:
 
 class Solution:
 
-    # make triangular numbers, and while its sum < (c + 1) // 2:
-    # if c - triangular num in triangle_nums_array: true
-
     def judge_square_sum(
             self,
             c: int,
