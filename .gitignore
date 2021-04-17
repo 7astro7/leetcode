@@ -12,3 +12,4 @@ questions.md
 .classpath
 glue.sh
 .venv
+compile.sh
