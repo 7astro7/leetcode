@@ -22,5 +22,8 @@ there are redundant lines of code, and likewise with tests. The tests
 are deliberately reundant although __all__ comments and feedback 
 are appreciated, including those about verbose tests 
 
+## criterion C tests
+https://github.com/Snaipe/Criterion
+
 ![Big Tux](tux.gif)
 ![Tux](dancing_tux.gif)
