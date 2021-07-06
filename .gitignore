@@ -13,3 +13,4 @@ questions.md
 glue.sh
 .venv
 compile.sh
+*.class
