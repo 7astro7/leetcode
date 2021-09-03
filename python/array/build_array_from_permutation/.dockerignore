@@ -1,0 +1,6 @@
+
+.venv
+questions.md
+__pycache__
+.vscode
+glue.sh
